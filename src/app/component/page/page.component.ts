@@ -7,10 +7,11 @@ import { Pages } from '../../models/pages';
 import { HeroBlockComponent } from '../hero/hero.component';
 import { PageBlock } from '../../models/page-block';
 import { HeroBlock, RichTextBlock } from '../../models/blocks';
+import { RteComponent } from '../rte/rte.component';
 @Component({
   selector: 'app-page',
   standalone: true,
-  imports: [CommonModule, HeroBlockComponent],
+  imports: [CommonModule, HeroBlockComponent, RteComponent],
   templateUrl: './page.component.html',
   styleUrl: './page.component.scss',
 })

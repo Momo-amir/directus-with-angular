@@ -3,8 +3,7 @@
   @for (block of sortedBlocks; track block.id) { @if (isHeroBlock(block)) {
   <app-hero-block [block]="block.item"></app-hero-block>
   } @if (isRichTextBlock(block)) {
-  <div class="rich-text" [innerHTML]="block.item.content"></div>
-  } }
+  <app-rte [block]="block.item"></app-rte> } }
 </div>
 } @else {
 <div>Loading page...</div>
