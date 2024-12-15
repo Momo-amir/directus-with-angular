@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { DirectusService } from '../../services/directus.service';
 import { Pages } from '../../models/pages';
-import { HeroBlockComponent } from '../../hero/hero.component';
+import { HeroBlockComponent } from '../hero/hero.component';
 import { PageBlock } from '../../models/page-block';
 import { HeroBlock, RichTextBlock } from '../../models/blocks';
 @Component({

@@ -1,0 +1,13 @@
+<div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content flex-col lg:flex-row">
+    <img
+      [src]="getImageUrl(block.image)"
+      alt="Hero Image"
+      class="max-w-sm rounded-lg shadow-2xl"
+    />
+    <div>
+      <h1 class="text-5xl font-bold">{{ block.headline }}</h1>
+      <div class="py-6" [innerHTML]="block.content"></div>
+    </div>
+  </div>
+</div>

@@ -2,7 +2,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HeroBlock } from '../models/blocks';
+import { HeroBlock } from '../../models/blocks';
 
 @Component({
   selector: 'app-hero-block',

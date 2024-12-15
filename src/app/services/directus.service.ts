@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { createDirectus, rest, readItems } from '@directus/sdk';
 import { Pages } from '../models/pages';
 import { environment } from '../../environments/environment';
+import { Menu } from '../models/menu';
 @Injectable({
   providedIn: 'root',
 })
@@ -75,5 +76,19 @@ export class DirectusService {
 
   getImageUrl(fileId: string) {
     return `${this.apiUrl}assets/${fileId}`;
+  }
+
+  async getMenu(): Promise<Menu | null> {
+    try {
+      const response = await this.directus.request(
+        readItems('menus', {
+          fields: ['*'],
+        })
+      );
+      return (response?.[0] as Menu) || null;
+    } catch (error) {
+      console.error('Error fetching menu:', error);
+      return null;
+    }
   }
 }

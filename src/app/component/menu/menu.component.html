@@ -1,0 +1,27 @@
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl">{{ menu?.title }}</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      @for (item of menu?.menu_items; track item.url) { @if (!item.submenu) {
+      <li>
+        <a [routerLink]="[item.url]">{{ item.label }}</a>
+      </li>
+      } @else {
+      <li>
+        <details>
+          <summary>{{ item.label }}</summary>
+          <ul class="bg-base-100 rounded-t-none p-2">
+            @for (subItem of item.submenu; track subItem.url) {
+            <li>
+              <a [routerLink]="[subItem.url]">{{ subItem.label }}</a>
+            </li>
+            }
+          </ul>
+        </details>
+      </li>
+      } }
+    </ul>
+  </div>
+</div>

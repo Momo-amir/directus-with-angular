@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { DirectusService } from './services/directus.service';
+import { MenuComponent } from './component/menu/menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
